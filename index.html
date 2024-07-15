@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Agreement</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Great+Vibes&family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: url('path-to-your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .heart-container {
+            position: relative;
+            width: 100%;
+            height: 7000px;
+            background: linear-gradient(45deg, #fceabb, #f8b500);
+            border-radius: 50%;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            clip-path: polygon(
+                50% 0%,
+                61% 10%,
+                75% 14%,
+                86% 28%,
+                98% 50%,
+                86% 72%,
+                75% 86%,
+                50% 100%,
+                25% 86%,
+                14% 72%,
+                2% 50%,
+                14% 28%,
+                25% 14%,
+                39% 10%
+            );
+            overflow: hidden; /* Ensure overflowed content does not affect layout */
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.85);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 90%;
+            overflow-y: auto;
+            max-height: 90vh;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            color: #E91E63;
+            font-family: 'Great Vibes', cursive;
+            font-size: 48px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            color: #673AB7;
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #3F51B5;
+            font-size: 24px;
+            font-style: italic;
+            margin-top: 20px;
+        }
+
+        h4 {
+            color: #009688;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            line-height: 1.6;
+            color: #333;
+            margin: 0 0 10px;
+        }
+
+        .terms {
+            margin-top: 20px;
+        }
+
+        .signature-section {
+            margin-top: 30px;
+        }
+
+        .signature-input {
+            margin: 10px 0;
+        }
+
+        .signature-label {
+            font-size: 18px;
+            font-weight: bold;
+            color: #E91E63;
+            margin-bottom: 5px;
+        }
+
+        .signature-canvas {
+            border: 2px solid #E91E63;
+            border-radius: 5px;
+            cursor: crosshair;
+            display: block;
+            margin: 0 auto;
+            touch-action: none; /* Disable default touch actions */
+        }
+
+        .button {
+            padding: 10px 20px;
+            background-color: #E91E63;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #d81b60;
+        }
+
+        .photos {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .photos img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin: 0 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .heart-rain {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            pointer-events: none;
+            display: none;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: red;
+            clip-path: polygon(50% 0%, 0% 50%, 50% 100%, 100% 50%);
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            from {transform: translateY(-100%);}
+            to {transform: translateY(100vh);}
+        }
+
+        .animated-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Dancing Script', cursive;
+            font-size: 40px;
+            color: #E91E63;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            display: none;
+            z-index: 2;
+            animation: fadeIn 2s forwards;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        .blinking-text {
+            font-family: 'Dancing Script', cursive;
+            font-size: 28px;
+            color: #E91E63;
+            animation: blink 1.5s infinite alternate;
+        }
+
+        @keyframes blink {
+            from { opacity: 1; }
+            to { opacity: 0.5; }
+        }
+    </style>
+</head>
+<body>
+    <div class="heart-container">
+        <div class="container">
+            <h1>Love Agreement</h1>
+
+            <div class="photos">
+                <img src="sachin.jpg" alt="Partner A">
+                <img src="sonal.png" alt="Partner B">
+            </div>
+
+            <p>This Agreement is made on July 15, 2024, by and between:</p>
+            <p class="blinking-text">Sachin Pratap Singh</p>
+            <p class="blinking-text">Subhashree Pradhan</p>
+
+            <h2>Purpose of the Agreement</h2>
+            <p>The purpose of this Agreement is to establish a mutual understanding and commitment regarding the expectations and boundaries in our relationship to ensure trust, fidelity, and transparency.</p>
+
+            <div class="terms">
+                <h3>1. Fidelity and Commitment</h3>
+                <p>- Both partners commit to being faithful to each other and not engaging in romantic or sexual relationships with any other individuals.</p>
+                <p>- If either partner is found to be cheating or in love with another person, this will be considered a breach of this Agreement.</p>
+                <p>- If either partner is found cheating, both agree not to see each other anymore after the breach is discovered.</p>
+
+                <h3>2. Online Activity</h3>
+                <p>- Both partners agree to be transparent about their online activities and not to engage in conversations or maintain accounts for the purpose of interacting with other potential romantic interests.</p>
+                <p>- If either partner is found to be consistently online but busy with accounts or interactions with other individuals, this will be considered a breach of this Agreement.</p>
+
+                <h3>3. Transparency and Communication</h3>
+                <p>- Both partners agree to maintain open and honest communication with each other about their feelings, concerns, and activities.</p>
+                <p>- Any suspicion or evidence of the above-mentioned behaviors should be discussed openly to avoid misunderstandings.</p>
+
+                <h3>4. Separation Clause</h3>
+                <p>- If any of the above terms are breached at any point in time, whether after 10 years or 20 years, both partners agree to separate and live their own lives independently.</p>
+                <p>- The decision to separate will be made mutually and amicably, ensuring respect and dignity for both parties.</p>
+            </div>
+
+            <h2>Duration of the Agreement</h2>
+            <p>This Agreement is effective from the date of signing and will remain in effect until either partner breaches the terms, leading to separation as mentioned above.</p>
+
+            <div class="signature-section">
+                <h2>Signatures</h2>
+                <div class="signature-input">
+                    <label class="signature-label" for="canvasA">Sachin Pratap Singh</label>
+                    <canvas id="canvasA" class="signature-canvas" width="300" height="150"></canvas>
+                    <button class="button" onclick="clearCanvas('canvasA')" style="margin-top: 10px;
+">Clear</button>
+                </div>
+                <div class="signature-input">
+                    <label class="signature-label" for="canvasB">Subhashree Pradhan</label>
+                    <canvas id="canvasB" class="signature-canvas" width="300" height="150"></canvas>
+                    <button class="button" onclick="clearCanvas('canvasB')" style="margin-top: 10px;">Clear</button>
+                </div>
+                <button class="button" onclick="signAgreement()" style="
+    margin-bottom: 50px;
+">Sign Agreement</button>
+
+                <div class="signature-display" id="signatureDisplay"></div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="heart-rain" id="heartRain"></div>
+    <div class="animated-text" id="animatedText">I Love You Sonal &#10083;</div>
+    
+    <script>
+        let partnerASigned = false;
+        let partnerBSigned = false;
+
+        function initCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const context = canvas.getContext('2d');
+            let drawing = false;
+
+            // For mouse events
+            canvas.addEventListener('mousedown', (e) => {
+                if ((canvasId === 'canvasA' && partnerASigned) || (canvasId === 'canvasB' && partnerBSigned)) {
+                    alert('You cannot sign again. Signature is already done.');
+                    return;
+                }
+
+                drawing = true;
+                context.beginPath();
+                context.moveTo(e.offsetX, e.offsetY);
+            });
+
+            canvas.addEventListener('mousemove', (e) => {
+                if (drawing) {
+                    context.lineTo(e.offsetX, e.offsetY);
+                    context.stroke();
+                }
+            });
+
+            canvas.addEventListener('mouseup', () => {
+                drawing = false;
+            });
+
+            canvas.addEventListener('mouseout', () => {
+                drawing = false;
+            });
+
+            // For touch events
+            canvas.addEventListener('touchstart', (e) => {
+                if ((canvasId === 'canvasA' && partnerASigned) || (canvasId === 'canvasB' && partnerBSigned)) {
+                    alert('You cannot sign again. Signature is already done.');
+                    return;
+                }
+
+                e.preventDefault();
+                drawing = true;
+                const rect = canvas.getBoundingClientRect();
+                const touch = e.touches[0];
+                context.beginPath();
+                context.moveTo(touch.clientX - rect.left, touch.clientY - rect.top);
+            });
+
+            canvas.addEventListener('touchmove', (e) => {
+                e.preventDefault();
+                if (drawing) {
+                    const rect = canvas.getBoundingClientRect();
+                    const touch = e.touches[0];
+                    context.lineTo(touch.clientX - rect.left, touch.clientY - rect.top);
+                    context.stroke();
+                }
+            });
+
+            canvas.addEventListener('touchend', (e) => {
+                drawing = false;
+            });
+
+            canvas.addEventListener('touchcancel', (e) => {
+                drawing = false;
+            });
+        }
+
+        function clearCanvas(canvasId) {
+            const canvas = document.getElementById(canvasId);
+            const context = canvas.getContext('2d');
+            context.clearRect(0, 0, canvas.width, canvas.height);
+
+            if (canvasId === 'canvasA') {
+                partnerASigned = false;
+            } else if (canvasId === 'canvasB') {
+                partnerBSigned = false;
+            }
+        }
+
+        function signAgreement() {
+            const canvasA = document.getElementById('canvasA');
+            const canvasB = document.getElementById('canvasB');
+            const signatureA = canvasA.toDataURL();
+            const signatureB = canvasB.toDataURL();
+
+            if (!partnerASigned && !partnerBSigned) {
+                if (signatureA && signatureB) {
+                    partnerASigned = true;
+                    partnerBSigned = true;
+
+                    const signatureDisplay = document.getElementById('signatureDisplay');
+                    signatureDisplay.innerHTML = `
+                        <p>Sachin Pratap Singh & Subhashree Pradhan have signed the Love Agreement on ${new Date().toLocaleDateString()}.</p>
+                        <img src="${signatureA}" alt="Signature A">
+                        <img src="${signatureB}" alt="Signature B">
+                    `;
+
+                    startHeartRain();
+                    displayAnimatedText();
+                } else {
+                    alert('Please sign both signatures to complete the agreement.');
+                }
+            } else {
+                alert('Signatures already completed.');
+            }
+        }
+
+        function startHeartRain() {
+            const heartRain = document.getElementById('heartRain');
+            heartRain.style.display = 'block';
+
+            for (let i = 0; i < 100; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.style.left = `${Math.random() * 100}%`;
+                heart.style.animationDuration = `${Math.random() * 3 + 2}s`;
+                heart.style.opacity = Math.random();
+                heartRain.appendChild(heart);
+            }
+
+            setTimeout(() => {
+                heartRain.style.display = 'none';
+                heartRain.innerHTML = '';
+            }, 5000);
+        }
+
+        function displayAnimatedText() {
+            const animatedText = document.getElementById('animatedText');
+            animatedText.style.display = 'block';
+
+            setTimeout(() => {
+                animatedText.style.display = 'none';
+            }, 5000);
+        }
+
+        window.onload = function() {
+            initCanvas('canvasA');
+            initCanvas('canvasB');
+        };
+    </script>
+</body>
+</html>
